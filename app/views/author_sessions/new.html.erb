@@ -17,3 +17,6 @@
 <% end %>
 
 <%= link_to 'Back', articles_path %>
+<% if Author.count == 0 || current_user %>
+  <%= link_to "Create user", new_author_path %>
+<% end %>
